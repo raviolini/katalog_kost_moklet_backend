@@ -26,23 +26,19 @@ Retrieves all kosts.
 
 JSON object containing all kosts data.
 
-##### Request
-
-None
-
 #### GET `/kosts/:id`
 
 Retrieves kost data with specified id.
-
-##### Response
-
-JSON object containing kost data with specified id
 
 ##### Request
 
 ###### Path Params
 
 `id`: Id of referred kost object.
+
+##### Response
+
+JSON object containing kost data with specified id
 
 #### POST `/kosts`
 
