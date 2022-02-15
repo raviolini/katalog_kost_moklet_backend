@@ -2,6 +2,8 @@ const Kost = require("../../models/Kost");
 
 const {matchedData} = require('express-validator');
 
+const SEARCH_RESULT_LIMIT = 20;
+
 module.exports = {
   add(req, res) {
     const data = matchedData(req);
@@ -34,9 +36,21 @@ module.exports = {
       Kost.findOne({ _id: id })
         .then((kost) => res.json(kost))
         .catch((err) => res.status(500).send(err));
-    } else {
-      Kost.find().then((kosts) => res.json(kosts));
+      return;
     }
+
+    const { q: name } = req.query;
+
+    if (name) {
+      Kost.find().byName(name).limit(SEARCH_RESULT_LIMIT).exec()
+        .then((kost) => res.json(kost))
+        .catch((err) => res.status(500).send(err));
+      return;
+    }
+
+    Kost.find()
+      .then((kosts) => res.json(kosts))
+      .catch((err) => res.status(500).send(err));
   },
 
   put(req, res) {

@@ -16,4 +16,8 @@ const kostSchema = new mongoose.Schema({
   contact: String,
 });
 
+kostSchema.query.byName = function(name) {
+  return this.where({ name: new RegExp(name, 'i') });
+}
+
 module.exports = mongoose.model("Kost", kostSchema);
