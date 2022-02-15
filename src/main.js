@@ -12,6 +12,7 @@ const port = process.env.APP_PORT || 8080;
 database.initialize();
 
 app.use(bodyParser.json());
+app.set('json spaces', 2);
 
 app.use('/kosts', kostRouter);
 
