@@ -44,6 +44,44 @@ Update kost data with specified id.
 
 ### Usage Example
 
+#### Querying for posts
+
+##### Searching posts by name
+
+Request:
+
+`GET 127.0.0.1:8080/kosts?q=Kost%20Pak%20%Bambang`
+
+Response:
+
+```json
+[
+  {
+      "name": "Kost Pak Bambang",
+      "description": "",
+      "address": "Jl. Danau Maninjau X",
+      "genderRestriction": "Male",
+      "contact": "pakbambang@gmail.com",
+      "price": 1600000,
+      "totalBedrooms": 5,
+      "availableBedrooms": 2,
+      "imageUrl": "https://example.com/kost.png"
+  }
+]
+```
+
+##### Get post by id
+
+Request:
+
+`GET 127.0.0.1:8080/kosts/620b69d9a7aae5932610dd27`
+
+##### Get all kosts
+
+Request:
+
+`GET 127.0.0.1:8080/kosts`
+
 #### Creating a new kost
 
 Request:
@@ -101,41 +139,3 @@ Request:
 Response:
 
 `204 No Content`
-
-#### Querying for posts
-
-##### Searching posts by name
-
-Request:
-
-`GET 127.0.0.1:8080/kosts?q=Kost%20Pak%20%Bambang`
-
-Response:
-
-```json
-[
-  {
-      "name": "Kost Pak Bambang",
-      "description": "",
-      "address": "Jl. Danau Maninjau X",
-      "genderRestriction": "Male",
-      "contact": "pakbambang@gmail.com",
-      "price": 1600000,
-      "totalBedrooms": 5,
-      "availableBedrooms": 2,
-      "imageUrl": "https://example.com/kost.png"
-  }
-]
-```
-
-#### Get post by id
-
-Request:
-
-`GET 127.0.0.1:8080/kosts/620b69d9a7aae5932610dd27`
-
-#### Get all kosts
-
-Request:
-
-`GET 127.0.0.1:8080/kosts`
