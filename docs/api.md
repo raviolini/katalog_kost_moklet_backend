@@ -26,6 +26,10 @@ Retrieves all kosts.
 
 Retrieves kost data with specified id.
 
+#### GET `/kosts?q={name}`
+
+Search for kosts with specified name.
+
 #### POST `/kosts`
 
 Creates new kost data.
