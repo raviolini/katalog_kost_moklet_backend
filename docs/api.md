@@ -22,72 +22,18 @@
 
 Retrieves all kosts.
 
-##### Response
-
-JSON object containing all kosts data.
-
 #### GET `/kosts/:id`
 
 Retrieves kost data with specified id.
-
-##### Request
-
-###### Path Params
-
-`id`: Id of referred kost object.
-
-##### Response
-
-JSON object containing kost data with specified id
 
 #### POST `/kosts`
 
 Creates new kost data.
 
-##### Request
-
-###### Body
-
-A JSON object containing the new kost data.
-
-##### Response
-
-###### 204 No Content
-
-Insert successful
-
 #### DELETE `/kosts/:id`
 
 Deletes kost with specified id.
 
-##### Request
-
-###### Path Params
-
-`id`: Id of referred kost object.
-
-##### Response
-
-###### 204 No Content
-
-Deletion successful
-
 #### PUT `/kosts/:id`
 
 Update kost data with specified id.
-
-##### Request
-
-###### Path Params
-
-`id`: Id of referred kost object.
-
-###### Body
-
-A JSON object containing the new kost data. Partial modification is not supported.
-
-##### Response
-
-###### 204 No Content
-
-Replacement successful.
