@@ -24,11 +24,13 @@ KKM Backend
 #### GET `/kosts`
 
 Retrieves all kosts.
+
 ![](https://github.com/raviolini/dev-snapshot/blob/main/kkm_backend/kosts.png)
 
 #### GET `/kosts?q={name}`
 
 Retrieves kost data with specified name.
+
 ![](https://github.com/raviolini/dev-snapshot/blob/main/kkm_backend/search.png)
 
 <!--
